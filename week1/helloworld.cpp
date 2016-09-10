@@ -1,7 +1,10 @@
 #include <iostream>
+int y = 0;
 
+//queue, stack, heap
+using namespace std;
 int main(int argc, char** argv) {
-  std::cout<<"hello world";
+  cout<<"hello " << "\t" << "world ";
   return 0;
 }
 
