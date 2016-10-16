@@ -26,12 +26,15 @@ int  main_7() {
     for (int i=1;i<s.length();i++) {
         int a = decode(s.at(i));
         int b = decode(prev);
+        //cout << "n=" << n << ",a=" << a << ", b=" << b << endl;
 
         if (a > b) {
-            n = a - b;
+            n = n - b + (a - b);
         } else {
             n = n + a;
         }
+
+        prev = s.at(i);
     }
 
     cout << n << endl;

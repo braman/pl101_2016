@@ -2,7 +2,7 @@
 #include <string>
 
 using namespace std;
-int  main_3() {
+int  main() {
     string s;
 
     cin >> s;
@@ -15,6 +15,12 @@ int  main_3() {
             a++;
         } else {
             a--;
+        }
+
+        //for the case when we start from closed bracket
+        if (a < 0) {
+            cout << 0 << endl;
+            return 0;
         }
     }
 

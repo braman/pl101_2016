@@ -2,7 +2,7 @@
 #include <string>
 
 using namespace std;
-int  main_2() {
+int  main_3() {
     string s;
 
     cin >> s;

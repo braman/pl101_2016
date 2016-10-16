@@ -3,7 +3,7 @@
 #include <math.h>
 
 using namespace std;
-int  main() {
+int  main_8() {
     int MAX = 100;
 
     int n;
