@@ -39,7 +39,7 @@ int bin_search(vector<int> vect/*sorted in ascending order*/,
 }
 
 
-int main() {
+int main_week10_bs() {
 
     vector<int> vect;
     vect.push_back(1);
