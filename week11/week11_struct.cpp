@@ -15,11 +15,36 @@ int ids = 1;
 
 void prints(student s) {
     cout << "Student - " << s.name << endl;
+    cout << "    ID  - " << s.id << endl;
     cout << "    age - " << s.age << endl;
     cout << " gender - " << (s.gender ? "male" : "female") << endl;
     cout << " phone  - " << s.phone << endl;
 }
 
+void printAll(vector<student> &v) {
+    for(vector<student>::iterator i = v.begin();i != v.end();i++) {
+        prints(*i);
+    }
+}
+
+void deleteStudent(vector<student> &v) {
+    cout << "enter student id to delete:" << endl;
+    int id;
+    int c = 0;
+
+    cin >> id;
+
+    for(int i=0;i<v.size();i++) {
+        //cout << *i << endl;
+        if (v[i].id == id) {
+            v.erase(v.begin()+i);
+            c++;
+        }
+    }
+
+    cout << c << " row(s) were deleted!" << endl;
+
+}
 int addStudent(vector<student> &v) {
     string name;
     int age;
@@ -73,11 +98,12 @@ int main() {
                 addStudent(students);
             break;
             case 2:
-                //TODO: display all students
+                printAll(students);
             break;
             case 3:
-                //TODO: remove student by id
+                deleteStudent(students);
             break;
+            case 0: return 0;
             default:
                 cout << "unknow command" << endl;
 
